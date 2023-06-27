@@ -1,0 +1,32 @@
+{
+	"name": "fmentor-stats-preview-nodejs-express-handlebars",
+	"version": "1.0.0",
+	"description": "stats preview card component using nodejs with express framework and handlebars template engine",
+	"main": "app.js",
+	"scripts": {
+		"start-sass": "sass --watch src/scss/main.scss public/css/main.css",
+		"start-lint": "prettier --write .",
+		"start": "nodemon app.js",
+		"start-server": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/al3xback/fmentor-stats-preview-nodejs-express-handlebars.git"
+	},
+	"author": "alex <al3xback@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/al3xback/fmentor-stats-preview-nodejs-express-handlebars/issues"
+	},
+	"homepage": "https://github.com/al3xback/fmentor-stats-preview-nodejs-express-handlebars#readme",
+	"dependencies": {
+		"body-parser": "^1.20.2",
+		"express": "^4.18.2",
+		"express-handlebars": "^7.0.7"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.22",
+		"prettier": "^2.8.8",
+		"sass": "^1.62.1"
+	}
+}

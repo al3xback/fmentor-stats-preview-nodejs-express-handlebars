@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mix;
+
+.btn {
+	@include mix.inline-flexbox;
+	padding: func.em(12, var.$font-size-primary);
+	border: 1px solid transparent;
+	@include mix.user-select(none);
+	@include mix.border-radius(4px);
+	@include mix.box-shadow(0rem 0.5em 1.125em rgba(0, 0, 0, 0.2));
+	font-size: 1em;
+	text-decoration: none;
+	@include mix.transition(all 0.4s);
+}
+
+.btn--link {
+	padding: 0;
+	@include mix.box-shadow(none);
+	color: var.$color-white-light;
+}
