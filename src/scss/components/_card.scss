@@ -3,14 +3,14 @@
 @use '../abstracts/mixins' as mix;
 
 .card {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	max-width: func.em(420, var.$font-size-primary);
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
 	background-color: var.$color-dark-desaturated-blue;
-	@include mix.border-radius(8px);
+	border-radius: 8px;
 	overflow: hidden;
 }
 
@@ -18,8 +18,8 @@
 .card__content,
 .card__stats-list,
 .card__stats-list-item {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 }
 
 .card__image-inner {
@@ -77,14 +77,14 @@
 
 @media (min-width: 65em) {
 	.card {
-		@include mix.flex-direction(row-reverse);
+		flex-direction: row-reverse;
 		max-width: func.em(1110, var.$font-size-primary);
 	}
 
 	.card__image,
 	.card__content {
-		@include mix.flex-shrink(0);
-		@include mix.flex-basis(50%);
+		flex-shrink: 0;
+		flex-basis: 50%;
 		max-width: 50%;
 	}
 
@@ -94,7 +94,7 @@
 	}
 
 	.card__image-inner {
-		@include mix.flex(auto);
+		flex: auto;
 		height: auto;
 		padding-bottom: 0;
 	}
@@ -114,7 +114,7 @@
 	}
 
 	.card__stats-list {
-		@include mix.flex-direction(row);
+		flex-direction: row;
 	}
 
 	.card__stats-list-item {

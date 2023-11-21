@@ -4,10 +4,15 @@
 	"description": "stats preview card component using nodejs with express framework and handlebars template engine",
 	"main": "app.js",
 	"scripts": {
-		"start-sass": "sass --watch src/scss/main.scss public/css/main.css",
-		"start-lint": "prettier --write .",
 		"start": "nodemon app.js",
-		"start-server": "node app.js"
+		"start-server": "node app.js",
+		"sass-dev": "sass --watch src/scss/main.scss public/css/main.css",
+		"sass-prod": "sass src/scss/main.scss public/css/main.css --style=compressed --no-source-map",
+		"postcss": "postcss public/css/main.css -o public/css/main.css --use autoprefixer --no-map",
+		"prettier": "prettier --write .",
+		"dev": "run-s sass-dev",
+		"lint": "run-s prettier",
+		"build": "run-s sass-prod postcss"
 	},
 	"repository": {
 		"type": "git",
@@ -26,7 +31,14 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.22",
+		"autoprefixer": "^10.4.16",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.31",
+		"postcss-cli": "^10.1.0",
 		"prettier": "^2.8.8",
 		"sass": "^1.62.1"
-	}
+	},
+	"browserslist": [
+		"defaults"
+	]
 }
