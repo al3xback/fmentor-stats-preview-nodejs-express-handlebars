@@ -12,7 +12,7 @@
 		"prettier": "prettier --write .",
 		"dev": "run-s sass-dev",
 		"lint": "run-s prettier",
-		"build": "run-s sass-prod postcss"
+		"build": "run-s lint sass-prod postcss"
 	},
 	"repository": {
 		"type": "git",
