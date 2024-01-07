@@ -1,7 +1,7 @@
 {
 	"name": "fmentor-stats-preview-nodejs-express-handlebars",
 	"version": "1.0.0",
-	"description": "stats preview card component using nodejs with express framework and handlebars template engine",
+	"description": "stats preview card component using nodejs, express, and handlebars",
 	"main": "app.js",
 	"scripts": {
 		"start": "nodemon app.js",
