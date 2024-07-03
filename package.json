@@ -2,7 +2,6 @@
 	"name": "fmentor-stats-preview-nodejs-express-handlebars",
 	"private": true,
 	"version": "1.0.0",
-	"type": "module",
 	"author": "alex <al3xback@gmail.com>",
 	"license": "ISC",
 	"scripts": {
